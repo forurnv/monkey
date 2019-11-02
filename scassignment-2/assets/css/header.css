@@ -1,0 +1,99 @@
+header {
+	height: 100px;
+	background: black;
+}
+header nav .wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+}
+header .logo {
+	padding-bottom: 2.5em;
+	height: 1em;
+	width: 1em;
+	background-size: 20px;
+}
+header .menu {
+	height: 30px;
+	width: 30px;
+	background-size: 30px;
+	display: none;
+}
+header .close {
+	margin: 1.5em;
+	width: 35px;
+	height: 35px;
+	background-size: 35px;
+	display: none;
+}
+header ul {
+	margin: 0;
+	padding: 0;
+	padding-top: 1em;
+	display: flex;
+	width: 400px;
+	justify-content: space-around;
+}
+header li {
+	color: white;
+	list-style: none;
+	margin: 0;
+}
+header a {
+	font-size: 1.5em;
+	padding: 1em;
+	color: white;
+	text-decoration: none;
+}
+@media all and (max-width: 600px) {
+	header ul {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: -150px;
+			width: 150px;
+			height: 70vh;
+			background-color: black;
+			border-bottom-left-radius: 3em;
+			border-color: black;
+
+			flex-direction: column;
+			justify-content: center;
+
+			transition: transform 1s;
+			transform: translatex(0px);
+	}
+	.menu-open {
+			transform: translateX(-150px);
+			z-index: 1;
+	}
+	.menu-close {
+			transform: translateX(0px);
+	}
+	#menu-button {
+		padding-top: 2em;
+	}
+	header .menu {
+			display: block;
+	}
+	header .close {
+			display: flex;
+			align-content: space-around;
+			margin-bottom: 4.2em;
+	}
+	header a {
+			font-size: 1.5em;
+			margin: 1em 0 1em 0;
+			padding: 1em;
+			display: flex;
+			align-self: center;
+	}
+	#herotitle {
+		font-size: 3em;
+		color: white;
+		position: absolute;
+		left: 1em;
+		top: 3em;
+	}
+}
